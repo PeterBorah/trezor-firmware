@@ -1,10 +1,10 @@
 { fullDeps ? false }:
 
-# the last successful build of nixos-20.09 (stable) as of 2020-12-15
+# the last successful build of nixpkgs-unstable as of 2020-12-27
 with import
   (builtins.fetchTarball {
-    url = "https://github.com/NixOS/nixpkgs/archive/647cc06986c1ae4a2bb05298e0cf598723e42970.tar.gz";
-    sha256 = "1n1sd5lbds08vxy8x9l94w0z8bbq39fh2rrr6mnq0rmhf4xb2mj1";
+    url = "https://github.com/NixOS/nixpkgs/archive/5bfb673137d95ea3339b491edcd04dff6c271580.tar.gz";
+    sha256 = "1qq3ipi6zjx95bw7ix3xicw3qx67jg9njs42mg3zim06p7rla91x";
   })
 { };
 
@@ -51,11 +51,11 @@ stdenv.mkDerivation ({
     pkgconfig
     poetry
     protobuf3_6
-    valgrind
     wget
     zlib
   ] ++ stdenv.lib.optionals (!stdenv.isDarwin) [
     procps
+    valgrind
   ] ++ stdenv.lib.optionals (stdenv.isDarwin) [
     darwin.apple_sdk.frameworks.CoreAudio
     darwin.apple_sdk.frameworks.AudioToolbox
