@@ -17,8 +17,6 @@
 from . import exceptions, messages
 from .tools import expect, normalize_nfc, session
 
-raise Exception("boo")
-
 
 def int_to_big_endian(value):
     return value.to_bytes((value.bit_length() + 7) // 8, "big")
@@ -104,4 +102,5 @@ def verify_message(client, address, signature, message):
     return isinstance(resp, messages.Success)
 
 def verify_merkle_proof(client):
-    return client.call(messages.EthereumVerifyMerkleProof())
+    resp = client.call(messages.EthereumVerifyMerkleProof())
+    return isinstance(resp, messages.Success)
