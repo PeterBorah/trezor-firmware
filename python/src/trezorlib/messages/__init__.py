@@ -109,6 +109,7 @@ from .EthereumSignMessage import EthereumSignMessage
 from .EthereumSignTx import EthereumSignTx
 from .EthereumTxAck import EthereumTxAck
 from .EthereumTxRequest import EthereumTxRequest
+from .EthereumVerifyMerkleProof import EthereumVerifyMerkleProof
 from .EthereumVerifyMessage import EthereumVerifyMessage
 from .Failure import Failure
 from .Features import Features

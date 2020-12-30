@@ -316,3 +316,8 @@ def verify_message(client, address, signature, message):
     """Verify message signed with Ethereum address."""
     signature = _decode_hex(signature)
     return ethereum.verify_message(client, address, signature, message)
+
+@cli.command()
+@with_client
+def verify_merkle_proof(client):
+    return ethereum.verify_merkle_proof(client)

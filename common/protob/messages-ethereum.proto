@@ -122,3 +122,6 @@ message EthereumVerifyMessage {
     optional bytes message = 3;     // message to verify
     optional string address = 4;     // address to verify
 }
+
+message EthereumVerifyMerkleProof {
+}

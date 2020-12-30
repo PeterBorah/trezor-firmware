@@ -10,3 +10,4 @@ def boot() -> None:
     wire.add(MessageType.EthereumSignTx, __name__, "sign_tx")
     wire.add(MessageType.EthereumSignMessage, __name__, "sign_message")
     wire.add(MessageType.EthereumVerifyMessage, __name__, "verify_message")
+    wire.add(MessageType.EthereumVerifyMerkleProof, __name__, "verify_merkle_proof")
